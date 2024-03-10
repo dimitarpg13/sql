@@ -133,6 +133,6 @@ With the next syntax we start with the first row before the current row and end 
 ```sql
 ROWS BETWEEN 1 PRECEEDING AND 1 FOLLOWING
 ```
-<img src="images/one_row_preceding_one_row_following.png" width="600">\
+<img src="images/one_row_preceding_and_one_row_following.png" width="600">\
 Figure 5: one row preceding and one row fillowing the current rwo with the modified example dataset
 
