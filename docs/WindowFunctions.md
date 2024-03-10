@@ -111,3 +111,8 @@ In the `ROWS` mode *frame_start* and *frame_end* allow us to specify which rows 
 
 *Note*: when designing queries with window function using window frame always ask yourself which row is the current row because different rows in the frame may appear quite differently. All of the figures below present how the frame looks like for asingle chosen input row.
 
+Let us consider a do-nothing window frame syntax which simply selects all rows from the beginning of the partition to the end:
+
+```sql
+ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+```
