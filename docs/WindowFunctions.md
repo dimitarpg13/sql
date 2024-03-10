@@ -25,5 +25,12 @@ and the following example data:
 |  6 |   2017         | 7.00  |
 
 For each film find the average rating of all films in its release year.
+Using `AVG` as a window function we write:
 
+```sql
+SELECT
+ f.id, f.release_year, f.rating,
+ AVG(rating) OVER (PARTITION BY release_year) AS year_avg
+    FROM films f ORDER BY release_year, rating;
+```
 
