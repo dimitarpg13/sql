@@ -136,3 +136,13 @@ ROWS BETWEEN 1 PRECEEDING AND 1 FOLLOWING
 <img src="images/one_row_preceding_and_one_row_following.png" width="600">\
 Figure 5: one row preceding and one row fillowing the current rwo with the modified example dataset
 
+It is not mandatory to include the current row; all we need to have is implicit reference to the current row. In the example below we start and end before the current row:
+
+```sql
+ROWS BETWEEN 3 PRECEDING AND 1 PRECEDING
+```
+<img src="images/three_preceding_and_one_preceding.png" width="600">\
+Figure 6: thre rows preceding and one row preceding the current row with the modified example dataset
+
+We can do even more interesting mappings using the *frame_exclusion* part.
+
