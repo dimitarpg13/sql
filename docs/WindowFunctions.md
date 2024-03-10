@@ -10,7 +10,6 @@ Let us have the table `films` given with the following schema:
 | PK |   name       |  type   |
 |----|--------------|---------|
 | yes | id           | Integer |
-|----|--------------|---------|
 |    | release_year | Integer |
 |    | rating       | Numeric |
 
