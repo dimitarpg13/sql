@@ -118,4 +118,10 @@ ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
 ```
 
 <img src="images/individual_rows_with_current_row.png" width="600">\
-Figure 3: individual rows for the modified example with current row indicator
+Figure 3: individual rows for the modified example dataset with current row indicator
+
+Now we will do something more interesting with the modified dataset - we will start with the beginning of the partition, but end with the current row. This is where the order of rows begins to matter:
+
+```sql
+ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+```
