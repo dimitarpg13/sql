@@ -125,3 +125,5 @@ Now we will do something more interesting with the modified dataset - we will st
 ```sql
 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 ```
+<img src="images/unbounded_preceding_to_current_row.png" width="600">\
+Figure 4: unbounded preceding to current row with the modified example dataset
