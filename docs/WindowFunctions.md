@@ -9,8 +9,8 @@ Each time a window function is called, it is passed a row (the current row in th
 Let us have the table `films` given with the following schema:
 | PK |   name       |  type   |
 |----|--------------|---------|
-| - [x] | id           | Integer |
-| - [ ]  | release_year | Integer |
-| - [ ]   | rating       | Numeric |
+| yes | id           | Integer |
+| no  | release_year | Integer |
+| no   | rating       | Numeric |
 
 
