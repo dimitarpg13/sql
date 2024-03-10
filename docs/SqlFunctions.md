@@ -11,4 +11,8 @@ returns some value of the expression from the group. The result is non-determini
 ANY_VALUE( [ DISTINCT ] <expr1> )
 ```
 
+*Window function*:
 
+```sql
+ANY_VALUE( [ DISTINCT ] <expr1> ) OVER ( [ PARTITION BY <expr2> ] )
+```
