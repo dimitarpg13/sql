@@ -96,6 +96,18 @@ In the current example the rows have been sorted by the `rating` column in ascen
 
 ### Rows mode
 
+The `ROWS` mode is the simplest one. It instructs the DB to treat each input row separately, as inidividual entities.
+
 <img src="images/rows_mode.png" width="600">\
-Figure 1: *ROWS* mode
+Figure 2: *ROWS* mode
+
+In the `ROWS` mode *frame_start* and *frame_end* allow us to specify which rows the window frame starts and ends with. They accept the following values:
+
+* `UNBOUNDED PRECEDING` - (possible only in *frame_start*) start wih the first row of the partition
+* `offset PRECEDING` - start/end with a given number of rows before the current row
+* `CURRENT ROW` - start/end with the current row
+* `offset FOLLOWING` - start/end with a given number number of rows after the current row
+* `UNBOUNDED FOLLOWING` - (possible only as a *frame_end*) end with the last row of the partition
+
+*Note*: when designing queries with window function using window frame always ask yourself which row is the current row because different rows in the frame may appear quite differently. All of the figures below present how the frame looks like for asingle chosen input row.
 
