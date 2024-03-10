@@ -16,3 +16,10 @@ ANY_VALUE( [ DISTINCT ] <expr1> )
 ```sql
 ANY_VALUE( [ DISTINCT ] <expr1> ) OVER ( [ PARTITION BY <expr2> ] )
 ```
+
+### Usage notes
+
+The `DISTINCT` keyword can be specified for this function, but it does not have any effect.
+When used as a window function this function does not support:
+* `ORDER By` sub-clause in the `OVER()` clause
+* Window frames
