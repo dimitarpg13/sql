@@ -116,3 +116,6 @@ Let us consider a do-nothing window frame syntax which simply selects all rows f
 ```sql
 ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
 ```
+
+<img src="images/individual_rows_with_current_row.png" width="600">\
+Figure 3: individual rows for the modified example with current row indicator
