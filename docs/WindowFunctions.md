@@ -57,6 +57,15 @@ Window frames are a feature which allows dividing partitions into smaller subset
 <img src="images/window_frames.png" width="600">\
 Figure 1: Window frames mechanism
 
+| id  | release_year  | rating  | avg_of_better |
+|-----|---------------|---------|---------------|
+|  1  |   2015        |  8.00   |  8.75         |
+|  2  |   2015        |  8.50   |  9.00         |
+|  3  |   2015        |  9.00   |  [NULL]       |
+|  4  |   2016        |  8.20   |  8.40         |
+| 5   |   2016        |  8.40   |  [NULL]       |
+|  6  |   2017        |  7.00   |  [NULL]       |
+
 But how to specify which rows should be included in window frames. 
 
 ## Syntax of window functions
@@ -79,17 +88,14 @@ In the last syntax
 * **frame_exclusion** can be used to specify parts of a window frame that have to be excluded from the calculations.
 
 *Note*: window frames are constructed for every single input row separately, their content may differ from row to row. It is essential to consider a window frame with regard to the row that the frame is built for. That row will be denoted as **the current row**.
+It is important to specify the order in which rows appear in a window frame. The order in which rows appear in a window frame must be specified precisely. In most cases the exact position of the current row compared to other rows will have direct impact on the content of a frame. In order to achieve this usually we want to have the rows sorted consistently - this can be done by the clause `ORDER BY` added to the window function call.
 
+In the current example the rows have been sorted by the `rating` column in ascending order. The simple data set has been modifed to contain films released in a single year only.
 
+## Window frame modes
 
+### Rows mode
 
-| id  | release_year  | rating  | avg_of_better |
-|-----|---------------|---------|---------------|
-|  1  |   2015        |  8.00   |  8.75         |
-|  2  |   2015        |  8.50   |  9.00         |
-|  3  |   2015        |  9.00   |  [NULL]       |
-|  4  |   2016        |  8.20   |  8.40         |
-| 5   |   2016        |  8.40   |  [NULL]       |
-|  6  |   2017        |  7.00   |  [NULL]       |
-
+<img src="images/rows_mode.png" width="600">\
+Figure 1: *ROWS* mode
 
