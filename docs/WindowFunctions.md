@@ -127,3 +127,12 @@ ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 ```
 <img src="images/unbound_preceding_to_current_row.png" width="600">\
 Figure 4: unbounded preceding to current row with the modified example dataset
+
+With the next syntax we start with the first row before the current row and end with the first row after the current row:
+
+```sql
+ROWS BETWEEN 1 PRECEEDING AND 1 FOLLOWING
+```
+<img src="images/one_row_preceding_one_row_following.png" width="600">\
+Figure 5: one row preceding and one row fillowing the current rwo with the modified example dataset
+
