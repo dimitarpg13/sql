@@ -62,7 +62,24 @@ But how to specify which rows should be included in window frames.
 ## Syntax of window functions
  General simplified forma of a window function invocation:
 
- 
+```sql
+function_name OVER (PARTITION BY ... ORDER BY ... frame_clause)
+```
+
+`frame_clause` is the part that defines window frames, It looks as follows:
+
+```sql
+mode BETWEEN frame_start AND frame_end [ frame_exclusion ]
+```
+
+In the last syntax 
+
+* **mode** sets the way a database engine treats input rows. There are three possible values: `ROWS`, `GROUPS` and `RANGE`.
+* **frame_start** and **frame_end** define where a window frame starts and where it ends
+* **frame_exclusion** can be used to specify parts of a window frame that have to be excluded from the calculations.
+
+*Note*: window frames are constructed for every single input row separately, their content may differ from row to row. It is essential to consider a window frame with regard to the row that the frame is built for. That row will be denoted as **the current row**.
+
 
 
 
