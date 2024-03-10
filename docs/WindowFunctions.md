@@ -57,6 +57,14 @@ Window frames are a feature which allows dividing partitions into smaller subset
 <img src="images/window_frames.png" width="600">\
 Figure 1: Window frames mechanism
 
+But how to specify which rows should be included in window frames. 
+
+## Syntax of window functions
+ General simplified forma of a window function invocation:
+
+ 
+
+
 
 | id  | release_year  | rating  | avg_of_better |
 |-----|---------------|---------|---------------|
