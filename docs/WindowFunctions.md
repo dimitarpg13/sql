@@ -24,7 +24,8 @@ and the following example data:
 |  5 |   2016         | 8.40  |
 |  6 |   2017         | 7.00  |
 
-For each film find the average rating of all films in its release year.
+*First Question*: For each film find the average rating of all films in its release year.
+
 Using `AVG` as a window function we write:
 
 ```sql
@@ -43,6 +44,8 @@ This will result in the following
 |  4  |   2016        |  8.20   | 8.30      |
 | 5   |   2016        |  8.40   | 8.30      |
 |  6  |   2017        |  7.00   | 7.00      |
+
+*Second Question*: For each film find an average rating of all strictly better films in its release year.
 
 
 
