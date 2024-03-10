@@ -47,5 +47,49 @@ This will result in the following
 
 *Second Question*: For each film find an average rating of all strictly better films in its release year.
 
+It is clear that we need to divide the rows into `release_year` partitions. But the calculation of average needs to be done only on a subset of a partition.
+The subset needs to be different for every row - we need to consider rows that have a greater value in the `rating` column only. 
+
+Here come the Window Frames..
+
+Window frames are a feature which allows dividing partitions into smaller subsets. These subsets can differ from a row to row. This is something that can't be achieved with partitioning only. For example, we can have window frames that contain all the rows with the same or greater value in a given column
+
+<img src="images/window_frames.png" width="600">\
+Figure 1: Window frames mechanism
+
+But how to specify which rows should be included in window frames. 
+
+## Syntax of window functions
+ General simplified forma of a window function invocation:
+
+```sql
+function_name OVER (PARTITION BY ... ORDER BY ... frame_clause)
+```
+
+`frame_clause` is the part that defines window frames, It looks as follows:
+
+```sql
+mode BETWEEN frame_start AND frame_end [ frame_exclusion ]
+```
+
+In the last syntax 
+
+* **mode** sets the way a database engine treats input rows. There are three possible values: `ROWS`, `GROUPS` and `RANGE`.
+* **frame_start** and **frame_end** define where a window frame starts and where it ends
+* **frame_exclusion** can be used to specify parts of a window frame that have to be excluded from the calculations.
+
+*Note*: window frames are constructed for every single input row separately, their content may differ from row to row. It is essential to consider a window frame with regard to the row that the frame is built for. That row will be denoted as **the current row**.
+
+
+
+
+| id  | release_year  | rating  | avg_of_better |
+|-----|---------------|---------|---------------|
+|  1  |   2015        |  8.00   |  8.75         |
+|  2  |   2015        |  8.50   |  9.00         |
+|  3  |   2015        |  9.00   |  [NULL]       |
+|  4  |   2016        |  8.20   |  8.40         |
+| 5   |   2016        |  8.40   |  [NULL]       |
+|  6  |   2017        |  7.00   |  [NULL]       |
 
 
