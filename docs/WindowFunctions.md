@@ -8,7 +8,6 @@ Each time a window function is called, it is passed a row (the current row in th
 
 Let us have the table `films` given with the following schema:
 
-|      films                  |
 |-----------------------------|
 | PK | id           | Integer |
 |----|--------------|---------|
