@@ -33,4 +33,16 @@ SELECT
  AVG(rating) OVER (PARTITION BY release_year) AS year_avg
     FROM films f ORDER BY release_year, rating;
 ```
+This will result in the following 
+
+| id  | release_year  | rating  | year_avg  |
+|-----|---------------|---------|-----------|
+|  1  |   2015        |  8.00   |  8.50     |
+|  2  |   2015        |  8.50   |  8.50     |
+|  3  |   2015        |  9.00   |  8.50     |
+|  4  |   2016        |  8.20   | 8.30      |
+| 5   |   2016        |  8.40   | 8.30      |
+|  6  |   2017        |  7.00   | 7.00      |
+
+
 
