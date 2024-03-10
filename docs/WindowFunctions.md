@@ -47,5 +47,24 @@ This will result in the following
 
 *Second Question*: For each film find an average rating of all strictly better films in its release year.
 
+It is clear that we need to divide the rows into `release_year` partitions. But the calculation of average needs to be done only on a subset of a partition.
+The subset needs to be different for every row - we need to consider rows that have a greater value in the `rating` column only. 
+
+Here come the Window Frames..
+
+Window frames are a feature which allows dividing partitions into smaller subsets. These subsets can differ from a row to row. This is something that can't be achieved with partitioning only. For example, we can have window frames that contain all the rows with the same or greater value in a given column
+
+<img src="images/window_frames.png" width="600">\
+Figure 1: Window frames mechanism
+
+
+| id  | release_year  | rating  | avg_of_better |
+|-----|---------------|---------|---------------|
+|  1  |   2015        |  8.00   |  8.75         |
+|  2  |   2015        |  8.50   |  9.00         |
+|  3  |   2015        |  9.00   |  [NULL]       |
+|  4  |   2016        |  8.20   |  8.40         |
+| 5   |   2016        |  8.40   |  [NULL]       |
+|  6  |   2017        |  7.00   |  [NULL]       |
 
 
