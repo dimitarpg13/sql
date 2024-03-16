@@ -1,4 +1,4 @@
-# Windowing Functions
+# Window Functions
 
 A window function operates on a group ("window") of related rows.
 
@@ -146,3 +146,4 @@ Figure 6: thre rows preceding and one row preceding the current row with the mod
 
 We can do even more interesting mappings using the *frame_exclusion* part.
 
+*frame_exclusion* allows to exclude some specific rows from the window frame, even if they would be included to the *frame_start* and *frame_end* options.
