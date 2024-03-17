@@ -75,3 +75,10 @@ LEFT JOIN (
    GROUP BY f.category_id
 ) categories ON f.category_id = categories.category_id
 ```
+Note: the pattern so far has been - we select a set of rows from the table and then join them with aggregated versions of the same row set. But we can't just use the `GROUP BY` in the main query because we want to get the full list of films as a result. Thus we have to copy-paste the main query to each subquery. This looks like a sub-optimal arrangement - ideally we would like to have a way to do computations on a row set, but not altering it at the same time.
+
+## Enter the Window Functions...
+
+Definition of window functions from Postgres documentation:
+
+> A window function performs a calculation across a set of table rows that are somehow related to the current row.
