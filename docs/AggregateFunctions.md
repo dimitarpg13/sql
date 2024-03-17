@@ -8,4 +8,12 @@ An aggregate function always returns exactly one row, **_even if the input conta
 
 ## ANY_VALUE
 
+Returns some value of the expression from the group. The result is non-deterministic.
 
+### Syntax
+
+#### Aggregated function ANY_VALUE
+
+```sql
+
+```
