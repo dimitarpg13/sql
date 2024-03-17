@@ -15,5 +15,5 @@ Returns some value of the expression from the group. The result is non-determini
 #### Aggregated function ANY_VALUE
 
 ```sql
-
+ANY_VALUE( [ DISTINCT ] <expr1> )
 ```
