@@ -58,3 +58,7 @@ SELECT customer.id, ANY_VALUE(customer.name), SUM(orders.value)
     JOIN orders ON customer.id = orders.customer_id
     GROUP BY customer.id;
 ```
+
+## CONDITIONAL_CHANGE_EVENT
+
+Returns a window event number for each row within a window partition when the value of the argument _`<expr1>`_ in the current row is different from the value of _`<expr1>`_ in the previous row. 
