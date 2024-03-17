@@ -39,3 +39,15 @@ SELECT *
 FROM cte1
 JOIN cte2
 ```
+Also, one can nest Snowflake CTE within other CTEs:
+```
+WITH outer_cte AS (
+   WITH inner_cte AS (
+      SELECT 'Hello from Dimitar' AS greeting
+   )
+   SELECT greeting FROM inner_cte
+)
+
+SELECT *
+FROM outer_cte;
+```
