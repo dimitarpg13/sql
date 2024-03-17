@@ -1,4 +1,4 @@
-# Aggregate Functions
+# Aggregate Functions 
 
 Aggregate functions operate on values across rows to perform mathematical calculations (e.g. sum, average, counting, min/max value, standard deviation) or non-mathematical calculations.
 
@@ -10,7 +10,7 @@ An aggregate function always returns exactly one row, **_even if the input conta
 
 Returns some value of the expression from the group. The result is non-deterministic.
 
-### Syntax
+### Syntax (specific to SnowSQL)
 
 #### Aggregated function ANY_VALUE
 
@@ -24,4 +24,10 @@ ANY_VALUE( [ DISTINCT ] <expr1> )
 ANY_VALUE( [ DISTINCT ] <expr1> ) OVER ( [ PARTITION BY <expr2> ] )
 ```
 
+### Usage Notes (specific to SnowSQL)
+
+* The `DISTINCT` keyword can be specified for this function, but it does not have any effect.
+* when used as a window function this function does not support:
+  ** `ORDER BY` sub-clause in the `OVER()` clause
+  ** window frames 
 
