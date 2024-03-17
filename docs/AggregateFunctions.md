@@ -17,3 +17,11 @@ Returns some value of the expression from the group. The result is non-determini
 ```sql
 ANY_VALUE( [ DISTINCT ] <expr1> )
 ```
+
+#### Window function ANY_VALUE
+
+```sql
+ANY_VALUE( [ DISTINCT ] <expr1> ) OVER ( [ PARTITION BY <expr2> ] )
+```
+
+
