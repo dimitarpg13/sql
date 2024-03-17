@@ -49,3 +49,12 @@ SELECT customer.id, MIN(customer.name), SUM(orders.value)
     JOIN orders ON customer.id = orders.customer_id
     GROUP BY customer.id;
 ```
+This simplifies the `GROUP BY` clause, but still requires computing the `MIN` function, which incurs an extra cost.
+
+With `ANY_VALUE`, you can execute the following query:
+```sql
+SELECT customer.id, ANY_VALUE(customer.name), SUM(orders.value)
+    FROM customer
+    JOIN orders ON customer.id = orders.customer_id
+    GROUP BY customer.id;
+```
