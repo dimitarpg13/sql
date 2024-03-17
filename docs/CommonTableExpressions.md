@@ -40,7 +40,7 @@ FROM cte1
 JOIN cte2
 ```
 Also, one can nest Snowflake CTE within other CTEs:
-```
+```sql
 WITH outer_cte AS (
    WITH inner_cte AS (
       SELECT 'Hello from Dimitar' AS greeting
