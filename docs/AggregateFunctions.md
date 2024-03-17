@@ -28,6 +28,6 @@ ANY_VALUE( [ DISTINCT ] <expr1> ) OVER ( [ PARTITION BY <expr2> ] )
 
 * The `DISTINCT` keyword can be specified for this function, but it does not have any effect.
 * when used as a window function this function does not support:
-  ** `ORDER BY` sub-clause in the `OVER()` clause
-  ** window frames 
+    * `ORDER BY` sub-clause in the `OVER()` clause
+    * window frames 
 
