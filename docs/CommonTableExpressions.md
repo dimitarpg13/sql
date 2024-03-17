@@ -14,7 +14,6 @@ SnowSQL CTE is particularly useful when working with recursive queries - queries
 Here is a quick example of a Snowflake CTE:
 
 ```sql
-/** Snowflake Common Table Expression example **/
 WITH CTEs_students AS (
    SELECT student_id, first_name, last_name
    FROM students
@@ -22,4 +21,21 @@ WITH CTEs_students AS (
 SELECT *
 FROM CTE_students
 WHERE class_id = 100;
+```
+
+The SnowSQL CTE first creates a temporary view named `CTE_students` that contains the `student ID`, `first name`, and `last name` of all students in the `students` table. Then, the CTEs are used in the outer `SELECT` statement to select all of the rows from the temporary view where the student ID is 100.
+
+Keep in mind that Snowflake CTE can be separated by commas - allowing us to define multiple by simply using comma (,) delimiters.
+
+```sql
+WITH
+   cte1 AS (
+      SELECT ...
+   ),
+   cte2 AS (
+      SELECT ...
+   )
+SELECT *
+FROM cte1
+JOIN cte2
 ```
