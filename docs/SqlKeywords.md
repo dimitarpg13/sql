@@ -1,4 +1,4 @@
-# Relevant SQL Keywords
+# Important SQL Keywords
 
 
 ## QUALIFY
