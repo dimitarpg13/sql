@@ -81,4 +81,4 @@ Note: the pattern so far has been - we select a set of rows from the table and t
 
 Definition of window functions from Postgres documentation:
 
-> A window function performs a calculation across a set of table rows that are somehow related to the current row.
+> _A window function performs a calculation across a set of table rows that are somehow related to the current row._
