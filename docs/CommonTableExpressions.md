@@ -72,3 +72,7 @@ FROM Employees
 WHERE DepartmentID = (SELECT DepartmentID FROM SalesDepartment);
 ```
 This query is bit more readable and therefore a bit more manageable.
+
+Query Reusability is increased with the usage of CTEs.
+
+For example let us consider the following complex query which contains two subqueries and 
