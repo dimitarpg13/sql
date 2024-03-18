@@ -51,3 +51,24 @@ WITH outer_cte AS (
 SELECT *
 FROM outer_cte;
 ```
+CTEs can be used to simplify complex queries breaking those into smaller, manageable code pieces. For example let us look into this example containing sub-query:
+
+```sql
+SELECT FirstName, LastName
+FROM Employees
+WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE DepartmentName = 'Sales');
+```
+
+With CTE the last query using sub-query becomes:
+
+```sql
+WITH SalesDepartment AS (
+   SELECT DepartmentID
+   FROM Departments
+   WHERE DepartmentName = 'Sales'
+)
+SELECT FirstName, LastName
+FROM Employees
+WHERE DepartmentID = (SELECT DepartmentID FROM SalesDepartment);
+```
+This query is bit more readable and therefore a bit more manageable.
