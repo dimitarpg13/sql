@@ -1,0 +1,16 @@
+literature/DBSystemsArchitecture/DatabaseSystemsMolina2009.pdf filter=lfs diff=lfs merge=lfs -text
+literature/TransactionalProcessing/TransactionProcessingConceptsandTechniquesGray1993.pdf filter=lfs diff=lfs merge=lfs -text
+literature/QueryOptimization/Database_Performance_Tuning_and_Query_Op.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLAntiPatterns/ filter=lfs diff=lfs merge=lfs -text
+literature/SQLAntiPatterns/Bill_Karwin-SQL_Antipatterns-EN.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLAntiPatterns/SQLAntipatternsAvoidingthePitfallsofDatabaseProgrammingKarwin1ed.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/sql-cookbook-query-solutions-and-techniques-for-all-sql-users-2nd-ed.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/SQLandAdvancedSQLmblaszczyk.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/IBM_DB_SQL_Programming.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/Alan_Beaulieu-Learning_SQL-EN.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/Advanced_SQL_Database_Programmers_Handbook_2003.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/JoeCelko/Celko-Thinking_in_Sets-Auxiliary_Temporal_and_Virtual_Tables_in_SQL_Elsevier_2008.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/JoeCelko/v filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/JoeCelko/celkos-sql-for-smarties-2005.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/JoeCelko/joe-celkos-sql-puzzles-amp-answers-2nd-ed.pdf filter=lfs diff=lfs merge=lfs -text
+literature/SQLandRelationalCalculus/How_to_Use_Window_Functions_in_SQL–with_Example_Queries.pdf filter=lfs diff=lfs merge=lfs -text
